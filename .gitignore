@@ -13,9 +13,3 @@
 .externalNativeBuild
 .cxx
 local.properties
-/.idea
-bin/
-gen/
-*.apk
-*.ap_
-*.aab
