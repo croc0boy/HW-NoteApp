@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="top"
+    android:fontFamily="sans-serif"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title"
+        android:inputType="textCapWords"
+        android:minHeight="48dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/main_text"
+        android:gravity="top"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="textMultiLine"
+        android:lines="7"
+        android:hint="@string/text"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_done_24"
+        android:background="@drawable/custom_border"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
