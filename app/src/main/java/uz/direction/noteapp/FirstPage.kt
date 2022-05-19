@@ -20,7 +20,6 @@ class FirstPage : Fragment(R.layout.fragment_first_page) {
         super.onViewCreated(view, savedInstanceState)
         val text = view.findViewById<TextView>(R.id.text)
         val title = view.findViewById<TextView>(R.id.title)
-
         view.findViewById<ImageButton>(R.id.button_edit).setOnClickListener {
         val action = FirstPageDirections.actionFirstPageToEditPage(
             text = text.text.toString(),
