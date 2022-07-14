@@ -3,58 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/firstPage">
+    app:startDestination="@id/mainPage">
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="uz.direction.noteapp.mvvm.ui.view.MainPage"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page">
+        <action
+            android:id="@+id/action_mainPage_to_noteFragment"
+            app:destination="@id/noteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="uz.direction.noteapp.mvvm.ui.view.NoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" >
+        <argument
+            android:name="note"
+            app:argType="uz.direction.noteapp.mvvm.model.Note" />
+    </fragment>
 
-    <fragment
-        android:id="@+id/firstPage"
-        android:name="uz.direction.noteapp.FirstPage"
-        android:label="fragment_first_page"
-        tools:layout="@layout/fragment_first_page" >
-        <action
-            android:id="@+id/action_firstPage_to_editPage"
-            app:destination="@id/editPage" >
-            <argument
-                android:name="title"
-                android:defaultValue="null" />
-            <argument
-                android:name="text"
-                android:defaultValue="null" />
-        </action>
-        <argument
-            android:name="text_changed"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue=""/>
-        <argument
-            android:name="title_changed"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue=""/>
-    </fragment>
-    <fragment
-        android:id="@+id/editPage"
-        android:name="uz.direction.noteapp.EditPage"
-        android:label="fragment_edit_page"
-        tools:layout="@layout/fragment_edit_page" >
-        <action
-            android:id="@+id/action_editPage_to_firstPage"
-            app:destination="@id/firstPage" >
-            <argument
-                android:name="text_changed"
-                android:defaultValue="null" />
-            <argument
-                android:name="title_changed"
-                android:defaultValue="null" />
-        </action>
-        <argument
-            android:name="title"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue=""/>
-        <argument
-            android:name="text"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue=""/>
-    </fragment>
 </navigation>

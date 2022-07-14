@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NoteApp">
         <activity
-            android:name=".MainActivity"
+            android:name="uz.direction.noteapp.mvvm.ui.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
